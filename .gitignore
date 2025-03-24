@@ -1,3 +1,40 @@
+# macOS system files
+.DS_Store
+
+# Xcode specific
+*.xcuserdata/
+*.xcworkspace/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+
+# Swift Package Manager
+/.swiftpm
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Environment variables
+.env
+
+# Logs
+*.log
 <<<<<<< HEAD
 # Your local changes
 .DS_Store
