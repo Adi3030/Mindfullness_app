@@ -50,7 +50,7 @@ class SignupViewController: UIViewController {
         // setUp Buttons UI
         styleStackViews()
         
-        // comment for test
+        // comment for test second
 
         // set up BG color
         applyGradientBackground()
