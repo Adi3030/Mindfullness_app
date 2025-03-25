@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings (pa).strings
+  Mindfullness
+
+  Created by aditya sharma on 25/03/25.
+  
+*/
+"continue_google"     = "ਗੂਗਲ ਦੇ ਨਾਲ ਜਾਰੀ ਰੱਖੋ";
+"continue_email"      = "ਫ਼ੋਨ ਜਾਂ ਈਮੇਲ ਜਾਰੀ ਰੱਖੋ";
+"have_account"        = "ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਤੋਂ ਪਹਿਲਾਂ ਖਾਤਾ ਕੀ ਹੈ?";
+"sign_in"             = "ਸਾਈਨ ਇਨ ਕਰੇ";
+"langugae"            = "ਭਾਸ਼ਾ";
+"ofLanguage"          = "ਪੰਜਾਬੀ | Punjabi";

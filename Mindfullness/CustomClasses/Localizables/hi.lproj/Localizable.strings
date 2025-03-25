@@ -1,0 +1,25 @@
+/* 
+  Localizable_Default.strings
+  Mindfullness
+
+  Created by aditya sharma on 25/03/25.
+  
+*/
+"continue_google"     = "Google के साथ जारी रखें";
+"continue_email"      = "फ़ोन या ईमेल से जारी रखें";
+"have_account"        = "पहले से ही एक खाता है?";
+"sign_in"             = "साइन इन करें";
+"language"            = "भाषा";
+"ofLanguage"          = "हिंदी | Hindi";
+
+ 
+// for guest screen
+
+"Relax & Meditation"    = "आराम और ध्यान";
+"Rejuvenate"            = "नवजीवन";
+"Connect"               = "जुड़ें";
+"label_2_data_1"        = "शारीरिक और मानसिक सामंजस्य के लिए आराम करें और संतुलन प्राप्त करें।";
+"label_2_data_2"        = "दिन के अंत में तनाव और जटिल भावनाओं को छोड़ने के लिए उपयोगी, यह आपको हल्का और तरोताजा महसूस कराएगा।";
+"label_2_data_3"        = "अपनी गहरी भावनाओं का अवलोकन करें, समझदारी से निर्णय लें और अपनी तकदीर स्वयं बनाएं।";
+"greetings"             = "नमस्ते!";
+"learn_to_meditate"     = "ध्यान करना सीखें";

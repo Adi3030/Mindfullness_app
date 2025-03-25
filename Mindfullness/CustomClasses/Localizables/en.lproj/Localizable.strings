@@ -1,0 +1,25 @@
+/* 
+  Localizable_Default.strings
+  Mindfullness
+
+  Created by aditya sharma on 25/03/25.
+  
+*/
+"continue_google"       = "Continue with Google";
+"continue_email"        = "Continue with Phone or Email";
+"have_account"          = "Already have an account?";
+"sign_in"               = "Sign in";
+"language"              = "Language";
+"ofLanguage"            = "English";
+ 
+// for Guest screen data
+
+"Relax & Meditation"    = "Relax & Meditation";
+"Rejuvenate"            = "Rejuvenate";
+"Connect"               = "Connect";
+"label_2_data_1"        = "Relax for physical-mental coherence and claim";
+"label_2_data_2"        = "Useful at the end of the day to let go for stress and complex emotions and will leave you feeling light and refreshed.";
+"label_2_data_3"        = "Observe you deepest feelings, make wise choices to weave your own destiny.";
+"greetings"             = "Good Morning";
+"learn_to_meditate"     = "Learn to meditate";
+

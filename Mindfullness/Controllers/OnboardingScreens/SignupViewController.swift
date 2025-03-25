@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class SignUpViewControllerCollectionViewCell: UICollectionViewCell {
     
@@ -25,6 +26,16 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var gogleStackView: UIStackView!
     @IBOutlet weak var phoneStackView: UIStackView!
+    @IBOutlet weak var continueWithGoogleLabel: UILabel!
+    @IBOutlet weak var continueWithEmail_Phone: UILabel!
+    @IBOutlet weak var haveAnAccountLabel: UILabel!
+    @IBOutlet weak var signInLabel: UILabel!
+    @IBOutlet weak var continueAsGuest: UILabel!
+    
+    
+    // UI Congiguration
+    let leftLanguageLabel = UILabel()
+    let languageLabel = UILabel()
     
     
     var timer: Timer?
@@ -34,6 +45,24 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        makeElementsTouchable()
+        GIDSignIn.sharedInstance.configuration = GIDConfiguration(clientID: "126198419082-5m0oc4afaeitq5u2digot3ctc9cetarm.apps.googleusercontent.com")
+        // Listen for language change notification
+        updateLanguageText()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguageText), name: Notification.Name("LanguageChanged"), object: nil)
+    }
+    
+    @objc func updateLanguageText() {
+        continueWithGoogleLabel.text = LanguageManager.shared.localizedString(forKey: "continue_google")
+        continueWithEmail_Phone.text = LanguageManager.shared.localizedString(forKey: "continue_email")
+        languageLabel.text = LanguageManager.shared.localizedString(forKey: "language")
+        leftLanguageLabel.text = LanguageManager.shared.localizedString(forKey: "ofLanguage")
+        signInLabel.text = LanguageManager.shared.localizedString(forKey: "sign_in")
+        haveAnAccountLabel.text = LanguageManager.shared.localizedString(forKey: "have_account")
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -51,7 +80,7 @@ class SignupViewController: UIViewController {
         styleStackViews()
         
         // comment for test second
-
+        
         // set up BG color
         applyGradientBackground()
         
@@ -59,11 +88,10 @@ class SignupViewController: UIViewController {
         pageControl.currentPageIndicatorTintColor = .black
         pageControl.pageIndicatorTintColor = .lightGray
         pageControl.backgroundColor = .clear
-
+        
         
         // Set up the navigation button
         // Create the left-most label
-        let leftLanguageLabel = UILabel()
         leftLanguageLabel.text = "Language"
         leftLanguageLabel.textColor = Color.appForgroundColor
         leftLanguageLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
@@ -72,16 +100,16 @@ class SignupViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftBarButtonItem
         
         // Create the label
-        let languageLabel = UILabel()
+        
         languageLabel.text = "English" // Default language text
         languageLabel.textColor = Color.appForgroundColor
         languageLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         
         
         
-        // Create the bell button
+        // Create the select Language button
         let bellButton = UIButton(type: .system)
-        bellButton.setImage(UIImage(systemName: "bell"), for: .normal)
+        bellButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
         bellButton.tintColor = Color.appForgroundColor
         bellButton.addTarget(self, action: #selector(bellButtonTapped), for: .touchUpInside)
         
@@ -110,24 +138,81 @@ class SignupViewController: UIViewController {
         startAutoScroll()
     }
     
+    func makeElementsTouchable() {
+        // Enable user interaction for stack views
+        gogleStackView.isUserInteractionEnabled = true
+        phoneStackView.isUserInteractionEnabled = true
+        continueAsGuest.isUserInteractionEnabled = true
+        signInLabel.isUserInteractionEnabled = true
+
+        
+        
+        // Add tap gesture recognizers
+        let googleTap = UITapGestureRecognizer(target: self, action: #selector(googleStackTapped))
+        let phoneTap = UITapGestureRecognizer(target: self, action: #selector(phoneStackTapped))
+        let guestTap = UITapGestureRecognizer(target: self, action: #selector(guestTapped))
+        let loginTap = UITapGestureRecognizer(target: self, action: #selector(signInTapped))
+
+        
+        gogleStackView.addGestureRecognizer(googleTap)
+        phoneStackView.addGestureRecognizer(phoneTap)
+        continueAsGuest.addGestureRecognizer(guestTap)
+        signInLabel.addGestureRecognizer(loginTap)
+
+    }
     // Action for bell button tap
     @objc func bellButtonTapped() {
-        print("Bell button tapped!")
+        let halfScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectLanguageTableViewController")
+        // Set modal presentation style
+        halfScreenVC.modalPresentationStyle = .pageSheet
+        if let sheet = halfScreenVC.sheetPresentationController {
+            sheet.detents = [.medium()] // Presents half-screen
+            sheet.prefersGrabberVisible = true // Optional: Add grabber at the top
+        }
+        self.present(halfScreenVC, animated: true, completion: nil)
+    }
+    
+    @objc func googleStackTapped() {
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = scene.windows.first,
+           let rootViewController = window.rootViewController {
+            // Use rootViewController here
+            GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { signInResult, error in
+                guard let user = signInResult?.user, error == nil else { return }
+                print("Signed in as \(user.profile?.name ?? "Unknown")")
+            }
+        }
+    }
+    
+    @objc func phoneStackTapped() {
+        print("Phone Stack View tapped!")
+        // Add your action here (e.g., open dialer)
+    }
+    
+    @objc func signInTapped() {
+        print("Sign In Label View tapped!")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func guestTapped() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GuestViewController") as! GuestViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
 extension SignupViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 320) // Custom size per item
-      }
-      
-      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-          return 0 // Space between rows
-      }
-      
-      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-          return 0 // Space between items
-      }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0 // Space between rows
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0 // Space between items
+    }
 }
 extension SignupViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -142,11 +227,6 @@ extension SignupViewController: UICollectionViewDataSource {
         
         return cell
     }
-    // Returns a supplementary view (e.g., headers and footers). (Optional)
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        return nil
-//    }
-    
     
 }
 extension SignupViewController: UIScrollViewDelegate {
@@ -160,11 +240,11 @@ extension SignupViewController: UIScrollViewDelegate {
     @objc func scrollToNextItem() {
         let nextIndex = (currentIndex + 1) % 3
         let indexPath = IndexPath(item: nextIndex, section: 0)
-
+        
         UIViewPropertyAnimator(duration: 8.0, curve: .easeInOut) { // Slower transition
             self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }.startAnimation()
-
+        
         currentIndex = nextIndex
         pageControl.currentPage = currentIndex
     }
@@ -177,6 +257,9 @@ extension SignupViewController: UIScrollViewDelegate {
             stackView?.clipsToBounds = true
         }
     }
+
+}
+extension UIViewController {
     func applyGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds // Full screen gradient
@@ -184,8 +267,8 @@ extension SignupViewController: UIScrollViewDelegate {
         // Define light colors (adjust as needed)
         gradientLayer.colors = [
             UIColor.white.cgColor,  // Start with white
-            UIColor.systemYellow.withAlphaComponent(0.2).cgColor, // Light yellow
-            UIColor.systemOrange.withAlphaComponent(0.2).cgColor  // Light orange
+            UIColor.systemYellow.withAlphaComponent(0.2).cgColor,
+            UIColor.systemOrange.withAlphaComponent(0.2).cgColor
         ]
         
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1) // Top center
@@ -193,4 +276,22 @@ extension SignupViewController: UIScrollViewDelegate {
         
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    func addGradientBorder(to imageView: UIImageView) {
+        let gradient = CAGradientLayer()
+        gradient.frame = imageView.bounds
+        gradient.colors = [UIColor.red.cgColor, UIColor.orange.cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+
+        let shape = CAShapeLayer()
+        shape.lineWidth = 5
+        shape.path = UIBezierPath(roundedRect: imageView.bounds, cornerRadius: imageView.layer.cornerRadius).cgPath
+        shape.fillColor = UIColor.clear.cgColor
+        shape.strokeColor = UIColor.black.cgColor
+        gradient.mask = shape
+
+        imageView.layer.addSublayer(gradient)
+    }
+
 }

@@ -7,14 +7,20 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
+        IQKeyboardManager.shared.resignOnTouchOutside = true
+        IQKeyboardManager.shared.isEnabled = true
+
         return true
     }
 
@@ -76,6 +82,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    // Handle Google Sign-In callback
+       func application(
+           _ app: UIApplication,
+           open url: URL,
+           options: [UIApplication.OpenURLOptionsKey: Any] = [:]
+       ) -> Bool {
+           return GIDSignIn.sharedInstance.handle(url)
+       }
 }
 

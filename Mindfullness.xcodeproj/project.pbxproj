@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0139A82056D819523BDC028D /* Pods_Mindfullness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F62B55B3E2BED1B1040A595 /* Pods_Mindfullness.framework */; };
+		E6245A382D928B5200614249 /* myinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6245A372D928B5200614249 /* myinfo.plist */; };
+		E6245A3B2D92900400614249 /* SelectLanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6245A3A2D92900400614249 /* SelectLanguageTableViewController.swift */; };
+		E6245A3D2D929A8200614249 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6245A3C2D929A8200614249 /* LanguageManager.swift */; };
+		E6245A472D92A94000614249 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6245A492D92A94000614249 /* Localizable.strings */; };
+		E6245A782D92C16C00614249 /* GuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6245A772D92C16C00614249 /* GuestViewController.swift */; };
+		E6245A7A2D93196500614249 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6245A792D93196500614249 /* LoginViewController.swift */; };
+		E6245A7C2D93290200614249 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6245A7B2D93290100614249 /* Constants.swift */; };
 		E67F06162D913F390050263B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67F06152D913F390050263B /* AppDelegate.swift */; };
 		E67F06182D913F390050263B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67F06172D913F390050263B /* SceneDelegate.swift */; };
 		E67F061D2D913F390050263B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67F061B2D913F390050263B /* Main.storyboard */; };
@@ -14,10 +22,26 @@
 		E67F06222D913F3D0050263B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67F06212D913F3D0050263B /* Assets.xcassets */; };
 		E67F06252D913F3D0050263B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67F06232D913F3D0050263B /* LaunchScreen.storyboard */; };
 		E67F06302D9142660050263B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67F062F2D9142660050263B /* SignupViewController.swift */; };
-		E67F06332D9144710050263B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67F06322D9144710050263B /* Color.swift */; };
+		E67F06332D9144710050263B /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67F06322D9144710050263B /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		143B0F2E17004EBE4A64CECF /* Pods-Mindfullness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindfullness.debug.xcconfig"; path = "Target Support Files/Pods-Mindfullness/Pods-Mindfullness.debug.xcconfig"; sourceTree = "<group>"; };
+		1F62B55B3E2BED1B1040A595 /* Pods_Mindfullness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mindfullness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D288FA69890F515FE41FE0C /* Pods-Mindfullness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindfullness.release.xcconfig"; path = "Target Support Files/Pods-Mindfullness/Pods-Mindfullness.release.xcconfig"; sourceTree = "<group>"; };
+		E6245A372D928B5200614249 /* myinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = myinfo.plist; path = ../../myinfo.plist; sourceTree = "<group>"; };
+		E6245A3A2D92900400614249 /* SelectLanguageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageTableViewController.swift; sourceTree = "<group>"; };
+		E6245A3C2D929A8200614249 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		E6245A482D92A94000614249 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6245A6C2D92B67800614249 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
+		E6245A6D2D92B68B00614249 /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/Main.strings; sourceTree = "<group>"; };
+		E6245A702D92B6AA00614249 /* pa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pa; path = pa.lproj/Main.strings; sourceTree = "<group>"; };
+		E6245A722D92B6BF00614249 /* pa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pa; path = pa.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6245A732D92B6C100614249 /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6245A762D92B76400614249 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6245A772D92C16C00614249 /* GuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewController.swift; sourceTree = "<group>"; };
+		E6245A792D93196500614249 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E6245A7B2D93290100614249 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E67F06122D913F390050263B /* Mindfullness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindfullness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67F06152D913F390050263B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E67F06172D913F390050263B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,9 +49,8 @@
 		E67F061F2D913F390050263B /* Mindfullness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mindfullness.xcdatamodel; sourceTree = "<group>"; };
 		E67F06212D913F3D0050263B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E67F06242D913F3D0050263B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E67F06262D913F3D0050263B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E67F062F2D9142660050263B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		E67F06322D9144710050263B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E67F06322D9144710050263B /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +58,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0139A82056D819523BDC028D /* Pods_Mindfullness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1433B6B8FCA410AD9FC976C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F62B55B3E2BED1B1040A595 /* Pods_Mindfullness.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD366C2ECE96C1E6FEE9E8BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				143B0F2E17004EBE4A64CECF /* Pods-Mindfullness.debug.xcconfig */,
+				7D288FA69890F515FE41FE0C /* Pods-Mindfullness.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6245A392D928FEC00614249 /* OnboardingScreens */ = {
+			isa = PBXGroup;
+			children = (
+				E67F062F2D9142660050263B /* SignupViewController.swift */,
+				E6245A3A2D92900400614249 /* SelectLanguageTableViewController.swift */,
+				E6245A772D92C16C00614249 /* GuestViewController.swift */,
+				E6245A792D93196500614249 /* LoginViewController.swift */,
+			);
+			path = OnboardingScreens;
+			sourceTree = "<group>";
+		};
+		E6245A402D929EE900614249 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				E6245A492D92A94000614249 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
 		E67F06092D913F390050263B = {
 			isa = PBXGroup;
 			children = (
 				E67F06142D913F390050263B /* Mindfullness */,
 				E67F06132D913F390050263B /* Products */,
+				CD366C2ECE96C1E6FEE9E8BE /* Pods */,
+				1433B6B8FCA410AD9FC976C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +122,12 @@
 		E67F06142D913F390050263B /* Mindfullness */ = {
 			isa = PBXGroup;
 			children = (
-				E67F06312D9144620050263B /* CustomClasses */,
 				E67F062C2D913F6F0050263B /* Application */,
+				E67F06312D9144620050263B /* CustomClasses */,
 				E67F062D2D913F7A0050263B /* Controllers */,
 				E67F062E2D913F8C0050263B /* Views */,
 				E67F06212D913F3D0050263B /* Assets.xcassets */,
-				E67F06262D913F3D0050263B /* Info.plist */,
+				E6245A372D928B5200614249 /* myinfo.plist */,
 				E67F061E2D913F390050263B /* Mindfullness.xcdatamodeld */,
 			);
 			path = Mindfullness;
@@ -83,7 +145,7 @@
 		E67F062D2D913F7A0050263B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E67F062F2D9142660050263B /* SignupViewController.swift */,
+				E6245A392D928FEC00614249 /* OnboardingScreens */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,7 +162,10 @@
 		E67F06312D9144620050263B /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
-				E67F06322D9144710050263B /* Color.swift */,
+				E67F06322D9144710050263B /* Singleton.swift */,
+				E6245A7B2D93290100614249 /* Constants.swift */,
+				E6245A3C2D929A8200614249 /* LanguageManager.swift */,
+				E6245A402D929EE900614249 /* Localizables */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -112,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E67F06292D913F3D0050263B /* Build configuration list for PBXNativeTarget "Mindfullness" */;
 			buildPhases = (
+				2A6A337EECAC4011ED443F03 /* [CP] Check Pods Manifest.lock */,
 				E67F060E2D913F390050263B /* Sources */,
 				E67F060F2D913F390050263B /* Frameworks */,
 				E67F06102D913F390050263B /* Resources */,
+				CE52814506E946E6DB46743A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +214,9 @@
 			knownRegions = (
 				en,
 				Base,
+				hi,
+				te,
+				pa,
 			);
 			mainGroup = E67F06092D913F390050263B;
 			productRefGroup = E67F06132D913F390050263B /* Products */;
@@ -164,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E67F06252D913F3D0050263B /* LaunchScreen.storyboard in Resources */,
+				E6245A472D92A94000614249 /* Localizable.strings in Resources */,
+				E6245A382D928B5200614249 /* myinfo.plist in Resources */,
 				E67F06222D913F3D0050263B /* Assets.xcassets in Resources */,
 				E67F061D2D913F390050263B /* Main.storyboard in Resources */,
 			);
@@ -171,14 +243,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A6A337EECAC4011ED443F03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mindfullness-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE52814506E946E6DB46743A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mindfullness/Pods-Mindfullness-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mindfullness/Pods-Mindfullness-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mindfullness/Pods-Mindfullness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E67F060E2D913F390050263B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6245A7A2D93196500614249 /* LoginViewController.swift in Sources */,
 				E67F06202D913F390050263B /* Mindfullness.xcdatamodeld in Sources */,
+				E6245A3D2D929A8200614249 /* LanguageManager.swift in Sources */,
 				E67F06162D913F390050263B /* AppDelegate.swift in Sources */,
-				E67F06332D9144710050263B /* Color.swift in Sources */,
+				E6245A782D92C16C00614249 /* GuestViewController.swift in Sources */,
+				E6245A7C2D93290200614249 /* Constants.swift in Sources */,
+				E67F06332D9144710050263B /* Singleton.swift in Sources */,
+				E6245A3B2D92900400614249 /* SelectLanguageTableViewController.swift in Sources */,
 				E67F06302D9142660050263B /* SignupViewController.swift in Sources */,
 				E67F06182D913F390050263B /* SceneDelegate.swift in Sources */,
 			);
@@ -187,10 +306,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E6245A492D92A94000614249 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6245A482D92A94000614249 /* en */,
+				E6245A722D92B6BF00614249 /* pa */,
+				E6245A732D92B6C100614249 /* te */,
+				E6245A762D92B76400614249 /* hi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E67F061B2D913F390050263B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E67F061C2D913F390050263B /* Base */,
+				E6245A6C2D92B67800614249 /* hi */,
+				E6245A6D2D92B68B00614249 /* te */,
+				E6245A702D92B6AA00614249 /* pa */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -211,6 +344,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -243,7 +377,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -274,6 +408,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -306,7 +441,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -327,6 +462,7 @@
 		};
 		E67F062A2D913F3D0050263B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143B0F2E17004EBE4A64CECF /* Pods-Mindfullness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,7 +477,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +497,7 @@
 		};
 		E67F062B2D913F3D0050263B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D288FA69890F515FE41FE0C /* Pods-Mindfullness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -375,7 +512,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

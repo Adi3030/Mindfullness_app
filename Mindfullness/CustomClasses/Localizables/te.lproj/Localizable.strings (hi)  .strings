@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Mindfullness
+
+  Created by aditya sharma on 25/03/25.
+  
+*/
+"continue_google"     = "गूगल के साथ जारी रखें";
+"continue_email"      = "फ़ोन या ईमेल से जारी रखें";
+"have_account"        = "क्या आपके पास पहले से ही खाता है?";
+"sign_in"             = "साइन इन करे";
+"langugae"            = "भाषा";
+"ofLanguage"          = "हिन्दी";

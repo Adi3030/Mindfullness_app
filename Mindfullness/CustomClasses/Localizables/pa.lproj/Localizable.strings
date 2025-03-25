@@ -1,0 +1,26 @@
+/* 
+  Localizable_Default.strings
+  Mindfullness
+
+  Created by aditya sharma on 25/03/25.
+  
+*/
+"continue_google"     = "Google ਨਾਲ ਜਾਰੀ ਰੱਖੋ";
+"continue_email"      = "ਫ਼ੋਨ ਜਾਂ ਈਮੇਲ ਨਾਲ ਜਾਰੀ ਰੱਖੋ";
+"have_account"        = "ਕੀ ਤੁਹਾਡੇ ਕੋਲ ਪਹਿਲਾਂ ਹੀ ਖਾਤਾ ਹੈ?";
+"sign_in"             = "ਸਾਈਨ ਇਨ ਕਰੋ";
+"language"            = "ਭਾਸ਼ਾ";
+"ofLanguage"          = "ਅੰਗਰੇਜ਼ੀ | Punjabi" ;
+ 
+// for Guest screen
+
+"Relax & Meditation"    = "ਆਰਾਮ ਅਤੇ ਧਿਆਨ";
+"Rejuvenate"            = "ਤਾਜ਼ਗੀ ਲਵੋ";
+"Connect"               = "ਕੁਨੈਕਟ ਕਰੋ";
+"label_2_data_1"        = "ਸ਼ਾਰੀਰੀਕ-ਮਾਨਸਿਕ ਸੰਤੁਲਨ ਲਈ ਆਰਾਮ ਕਰੋ ਅਤੇ ਆਪਣੀ ਉਰਜਾ ਵਾਪਸ ਲਵੋ।";
+"label_2_data_2"        = "ਦਿਨ ਦੇ ਅਖੀਰ 'ਚ ਤਣਾਅ ਅਤੇ ਉਲਝਣ ਭਰੀਆਂ ਭਾਵਨਾਵਾਂ ਨੂੰ ਛੱਡਣ ਲਈ ਲਾਭਦਾਇਕ, ਜੋ ਤੁਹਾਨੂੰ ਹਲਕਾ ਅਤੇ ਤਾਜ਼ਾ ਮਹਿਸੂਸ ਕਰੇਗਾ।";
+"label_2_data_3"        = "ਆਪਣੀਆਂ ਸਭ ਤੋਂ ਗਹਿਰੀਆਂ ਭਾਵਨਾਵਾਂ ਨੂੰ ਦੇਖੋ, ਸਮਝਦਾਰ ਫੈਸਲੇ ਲਓ ਅਤੇ ਆਪਣੀ تقدੀਰ ਨੂੰ ਆਪ ਬਣਾਓ।";
+"greetings"             = "ਸ਼ੁਭ ਸਵੇਰ";
+"learn_to_meditate"     = "ਸਿੱਖੋ ਫਿਰ ਮਨਨ ਕਰੋ";
+
+

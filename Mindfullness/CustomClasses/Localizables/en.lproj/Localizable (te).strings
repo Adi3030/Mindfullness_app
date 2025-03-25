@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings (te).strings
+  Mindfullness
+
+  Created by aditya sharma on 25/03/25.
+  
+*/
+"continue_google"     = "Google తో కొనసాగండి";
+"continue_email"      = "ఫోన్ లేదా ఇమెయిల్ ద్వారా కొనసాగించండి";
+"have_account"        = "మీకు ఇప్పటికే ఖాతా ఉందా?";
+"sign_in"             = "సైన్ ఇన్ చేయండి";
+"langugae"            = "భాష";
+"ofLanguage"          = "తెలుగు | Telugu";
